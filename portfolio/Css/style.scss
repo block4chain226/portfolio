@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+$whiteFont: white;
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0em;
+  color: $whiteFont;
+}
+a {
+  text-decoration: none;
+  color: $whiteFont;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  //padding: 20px 0;
+  background-color: black;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+/////////////////////////Header
+.header {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    background: url("/portfolio/Assets/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
+  &__logo {
+    padding-top: 20px;
+    img {
+      width: 50px;
+    }
+  }
+
+  &__menu-container {
+    padding-top: 20px;
+    display: flex;
+  }
+
+  &__menu {
+    li {
+      display: inline;
+      margin-right: 30px;
+    }
+  }
+
+  &__language {
+  }
+}
+.img-container {
+  max-width: 100%;
+}
+.main {
+}
+
+//////////////////////Hero
+.hero {
+  &__row {
+    background-image: url("/portfolio/Assets/img/bg.jpg");
+    background-position: center -90px;
+    background-repeat: no-repeat;
+    min-height: 333px;
+    padding: 160px 860px 330px 80px;
+    margin-bottom: 100px;
+  }
+
+  &__text {
+  }
+
+  &__title {
+    font-family: Merriweather;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__description {
+    font-size: 20px;
+    font-style: normal;
+    line-height: 40px;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  &__button {
+  }
+}
+
+///////////////////////////////Skills
+.skills {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title-line {
+  }
+
+  &__item-container {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__img {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 102px;
+  }
+}
+.title-line {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #bdae82;
+  font-family: Merriweather;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0em;
+
+  h2::before,
+  h2::after {
+    content: "";
+    width: 225px;
+    height: 2px;
+    display: inline-block;
+    background-color: #bdae82;
+    vertical-align: middle;
+    margin: 0 20px 0 20px;
+  }
+}
+.img-container {
+}
+
+.button {
+  width: 220px;
+  height: 55px;
+  text-align: center;
+  background-color: #bdae82;
+  color: black;
+  vertical-align: inherit;
+}
+
+.footer {
+}

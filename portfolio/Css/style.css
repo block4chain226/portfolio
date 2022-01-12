@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0em;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  background-color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url("/portfolio/Assets/img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.header__logo {
+  padding-top: 20px;
+}
+
+.header__logo img {
+  width: 50px;
+}
+
+.header__menu-container {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__menu li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.img-container {
+  max-width: 100%;
+}
+
+.hero__row {
+  background-image: url("/portfolio/Assets/img/bg.jpg");
+  background-position: center -90px;
+  background-repeat: no-repeat;
+  min-height: 333px;
+  padding: 160px 860px 330px 80px;
+  margin-bottom: 100px;
+}
+
+.hero__title {
+  font-family: Merriweather;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.hero__description {
+  font-size: 20px;
+  font-style: normal;
+  line-height: 40px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.skills__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skills__item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skills__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.skills__img {
+  margin-bottom: 50px;
+}
+
+.skills__title {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0em;
+}
+
+.skills__description {
+  font-size: 18px;
+  line-height: 36px;
+  margin-bottom: 102px;
+}
+
+.title-line {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #bdae82;
+  font-family: Merriweather;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0em;
+}
+
+.title-line h2::before,
+.title-line h2::after {
+  content: "";
+  width: 225px;
+  height: 2px;
+  display: inline-block;
+  background-color: #bdae82;
+  vertical-align: middle;
+  margin: 0 20px 0 20px;
+}
+
+.button {
+  width: 220px;
+  height: 55px;
+  text-align: center;
+  background-color: #bdae82;
+  color: black;
+  vertical-align: inherit;
+}
+/*# sourceMappingURL=style.css.map */
