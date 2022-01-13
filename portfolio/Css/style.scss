@@ -28,9 +28,10 @@ li {
   min-height: 100vh;
 }
 .container {
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 /////////////////////////Header
 .header {
@@ -102,6 +103,10 @@ li {
   }
 
   &__button {
+    background-color: #bdae82;
+    a {
+      color: black;
+    }
   }
 }
 
@@ -162,6 +167,48 @@ li {
     margin: 0 20px 0 20px;
   }
 }
+
+//Portfolio
+.portfolio {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  &__button {
+    margin-right: 5px;
+    background-color: black;
+    a {
+      color: #bdae82;
+    }
+    border: 2px solid #bdae82;
+  }
+
+  &__gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    max-width: 450px;
+    max-height: 560px;
+    margin: 0 25px 25px 0;
+    img {
+      width: 100%;
+    }
+    &:nth-child(3n) {
+      margin-right: 0px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
 .img-container {
 }
 
@@ -169,8 +216,6 @@ li {
   width: 220px;
   height: 55px;
   text-align: center;
-  background-color: #bdae82;
-  color: black;
   vertical-align: inherit;
 }
 

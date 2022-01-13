@@ -32,9 +32,11 @@ li {
 }
 
 .container {
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .header__row {
@@ -98,6 +100,14 @@ li {
   line-height: 40px;
   text-align: left;
   margin-bottom: 25px;
+}
+
+.hero__button {
+  background-color: #bdae82;
+}
+
+.hero__button a {
+  color: black;
 }
 
 .skills__container {
@@ -167,12 +177,63 @@ li {
   margin: 0 20px 0 20px;
 }
 
+.portfolio__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.portfolio__item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 60px;
+}
+
+.portfolio__button {
+  margin-right: 5px;
+  background-color: black;
+  border: 2px solid #bdae82;
+}
+
+.portfolio__button a {
+  color: #bdae82;
+}
+
+.portfolio__gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolio__image {
+  max-width: 450px;
+  max-height: 560px;
+  margin: 0 25px 25px 0;
+}
+
+.portfolio__image img {
+  width: 100%;
+}
+
+.portfolio__image:nth-child(3n) {
+  margin-right: 0px;
+  margin-bottom: 30px;
+}
+
 .button {
   width: 220px;
   height: 55px;
   text-align: center;
-  background-color: #bdae82;
-  color: black;
   vertical-align: inherit;
 }
 /*# sourceMappingURL=style.css.map */
