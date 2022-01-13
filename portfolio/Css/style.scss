@@ -5,6 +5,9 @@ $whiteFont: white;
   padding: 0;
   margin: 0;
 }
+.pad {
+  padding: 0;
+}
 body {
   font-family: Inter;
   font-size: 20px;
@@ -31,7 +34,7 @@ li {
 .container {
   width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  //padding: 0 20px;
   box-sizing: border-box;
 }
 /////////////////////////Header
@@ -118,6 +121,7 @@ li {
 ///////////////////////////////Skills
 .skills {
   &__container {
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
   }
@@ -176,6 +180,7 @@ li {
 //Portfolio
 .portfolio {
   &__container {
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     margin-bottom: 75px;
@@ -217,6 +222,7 @@ li {
 //Video
 .video {
   &__container {
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
@@ -239,6 +245,7 @@ li {
   }
 
   &__container {
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
@@ -349,7 +356,7 @@ li {
 
 .footer {
   &__container {
-    padding: 50px 0;
+    padding: 50px 20px;
     display: flex;
     justify-content: space-between;
   }
@@ -374,6 +381,4 @@ li {
       }
     }
   }
-}
-.socials {
 }
