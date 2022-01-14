@@ -32,11 +32,10 @@ li {
   background-color: black;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 100vh;
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -72,7 +71,15 @@ li {
 
 .header__menu li {
   display: inline;
-  margin-right: 30px;
+  margin-right: 25px;
+}
+
+.header__menu li:last-child {
+  margin-right: 0;
+}
+
+.header__language {
+  margin-left: 41px;
 }
 
 .img-container {
@@ -83,9 +90,8 @@ li {
   background-image: url("/portfolio/Assets/img/bg.jpg");
   background-position: center -90px;
   background-repeat: no-repeat;
-  min-height: 333px;
   padding: 160px 870px 330px 80px;
-  margin-bottom: 100px;
+  margin-bottom: 97px;
 }
 
 .hero__title {
@@ -95,6 +101,7 @@ li {
   line-height: 120px;
   letter-spacing: 0em;
   text-align: left;
+  margin-bottom: 13px;
 }
 
 .hero__title h1 {
@@ -144,10 +151,11 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  max-width: 25%;
 }
 
 .skills__img {
-  margin-bottom: 50px;
+  margin-bottom: 27px;
 }
 
 .skills__title {
@@ -168,7 +176,7 @@ li {
   margin-bottom: 60px;
   color: #bdae82;
   font-family: Merriweather;
-  font-size: 40px;
+  font-size: 27px;
   font-style: normal;
   font-weight: 700;
   line-height: 80px;
@@ -178,7 +186,7 @@ li {
 .title-line h2::before,
 .title-line h2::after {
   content: "";
-  width: 225px;
+  width: 274px;
   height: 2px;
   display: inline-block;
   background-color: #bdae82;
@@ -249,7 +257,15 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: 84px;
+}
+
+.video__video-container {
+  max-width: 100%;
+}
+
+.video__video-container img {
+  width: 100%;
 }
 
 .price_button {
@@ -273,6 +289,7 @@ li {
 }
 
 .price__item-container {
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,7 +350,7 @@ li {
 .contacts__container {
   float: right;
   padding-right: 20px;
-  padding-top: 60px;
+  padding-top: 56px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,7 +364,7 @@ li {
   background: transparent;
   border: 2px solid #bdae82;
   color: #bdae82;
-  width: 93%;
+  width: 425px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -359,6 +376,7 @@ li {
   background: transparent;
   border: 2px solid #bdae82;
   color: #bdae82;
+  width: 425px;
   padding: 5px 0 55px 20px;
   margin-bottom: 20px;
 }
@@ -401,6 +419,7 @@ li {
 }
 
 .footer__socials a {
+  vertical-align: sub;
   margin-right: 20px;
 }
 
