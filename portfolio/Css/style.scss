@@ -43,7 +43,7 @@ li {
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    background: url("/Assets/img/bg.jpg");
+    background: url("Assets/img/bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
   }
@@ -312,7 +312,7 @@ li {
 //Contacts
 .contacts {
   &__hero {
-    background: url("/Assets/img/contacts.jpg");
+    background: url("/portfolio/Assets/img/contacts.jpg");
     height: 700px;
     max-height: 700px;
   }
