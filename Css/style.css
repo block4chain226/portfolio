@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  border: 0;
 }
 
 .pad {
@@ -52,6 +53,7 @@ li {
   background: url("/Assets/img/bg.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
+  background-size: inherit;
 }
 
 .header__logo {
@@ -89,9 +91,14 @@ li {
 .hero__row {
   background-image: url("/Assets/img/bg.jpg");
   background-position: center -90px;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding: 160px 870px 330px 80px;
+  padding: 160px 0px 330px 80px;
   margin-bottom: 97px;
+}
+
+.hero__text {
+  max-width: 37%;
 }
 
 .hero__title {
@@ -268,11 +275,11 @@ li {
   width: 100%;
 }
 
-.price_button {
+.price__button {
   background-color: #bdae82;
 }
 
-.price_button a {
+.price__button a {
   color: black;
 }
 
@@ -307,8 +314,14 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  padding: 43px 115px;
+  padding: 43px 15px;
+  width: 100%;
   border: 2px solid #bdae82;
+  margin-right: 25px;
+}
+
+.price__item:last-child {
+  margin-right: 0;
 }
 
 .price__title {
@@ -339,6 +352,18 @@ li {
   line-height: 36px;
   letter-spacing: 0em;
   margin-bottom: 40px;
+}
+
+@media (max-width: 878px) {
+  .price__description {
+    font-size: 16px;
+  }
+  .price__item {
+    margin-right: 5px;
+  }
+  .price__button {
+    width: 220px;
+  }
 }
 
 .contacts__hero {
@@ -399,9 +424,18 @@ li {
 
 .button {
   width: 220px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   height: 55px;
   text-align: center;
   vertical-align: inherit;
+}
+
+@media (max-width: 878px) {
+  .button {
+    width: 150px;
+  }
 }
 
 .footer__container {

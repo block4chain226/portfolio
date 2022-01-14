@@ -4,6 +4,7 @@ $whiteFont: white;
 * {
   padding: 0;
   margin: 0;
+  border: 0;
 }
 .pad {
   padding: 0;
@@ -46,6 +47,7 @@ li {
     background: url("/Assets/img/bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
+    background-size: inherit;
   }
   &__logo {
     padding-top: 20px;
@@ -84,13 +86,15 @@ li {
   &__row {
     background-image: url("/Assets/img/bg.jpg");
     background-position: center -90px;
+    background-size: cover;
     background-repeat: no-repeat;
     //min-height: 333px;
-    padding: 160px 870px 330px 80px;
+    padding: 160px 0px 330px 80px;
     margin-bottom: 97px;
   }
 
   &__text {
+    max-width: 37%;
   }
 
   &__title {
@@ -247,7 +251,7 @@ li {
 
 //Price
 .price {
-  &_button {
+  &__button {
     background-color: #bdae82;
     a {
       color: black;
@@ -274,8 +278,13 @@ li {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 43px 115px;
+    padding: 43px 15px;
+    width: 100%;
     border: 2px solid #bdae82;
+    margin-right: 25px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -306,6 +315,17 @@ li {
     line-height: 36px;
     letter-spacing: 0em;
     margin-bottom: 40px;
+  }
+  @media (max-width: 878px) {
+    &__description {
+      font-size: 16px;
+    }
+    &__item {
+      margin-right: 5px;
+    }
+    &__button {
+      width: 220px;
+    }
   }
 }
 
@@ -361,9 +381,13 @@ li {
 
 .button {
   width: 220px;
+  align-self: center;
   height: 55px;
   text-align: center;
   vertical-align: inherit;
+  @media (max-width: 878px) {
+    width: 150px;
+  }
 }
 
 .footer {
