@@ -47,6 +47,7 @@ li {
     background: url("/Assets/img/bg.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
+
     background-size: inherit;
   }
   &__logo {
@@ -59,6 +60,7 @@ li {
   &__menu-container {
     padding-top: 20px;
     display: flex;
+    margin: 0;
   }
 
   &__menu {
@@ -74,13 +76,130 @@ li {
   &__language {
     margin-left: 41px;
   }
+  &__burger {
+    //padding-top: 30px;
+    position: relative;
+    right: 0px;
+    top: 5px;
+    &::after,
+    &::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: #fff;
+      display: inline-block;
+    }
+    &::after {
+      position: absolute;
+      top: 10px;
+      right: 64px;
+      background-color: yellow;
+    }
+    span::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: #fff;
+      display: inline-block;
+      position: absolute;
+      top: 30px;
+      right: 64px;
+    }
+    &::before {
+      position: absolute;
+      top: 20px;
+      right: 64px;
+      background-color: red;
+    }
+  }
+  @media (min-width: 768px) {
+    &__burger {
+      display: none;
+    }
+  }
+  @media (max-width: 920px) {
+    li,
+    span {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    &__menu {
+      //display: none;
+    }
+    &__language {
+      margin-right: 120px;
+      a {
+        font-size: 20px;
+      }
+    }
+    &__logo {
+      margin-left: 60px;
+    }
+    &__menu {
+      display: none;
+    }
+    //menu burger
+    &__menu {
+      top: 0;
+
+      left: 100%;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      transition: all 0.4s ease-in-out;
+
+      ul {
+        margin-top: 134px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+      }
+      li {
+        display: block;
+        color: white;
+        font-size: 35px;
+        line-height: 73px;
+        margin-bottom: 16px;
+      }
+    }
+    .active {
+      left: 25%;
+      transition: all 0.4s ease-in-out;
+    }
+  }
 }
+
 .img-container {
   max-width: 100%;
 }
 .main {
 }
 
+.title-line {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #bdae82;
+  font-family: Merriweather;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 0em;
+
+  h2::before,
+  h2::after {
+    content: "";
+    width: 274px;
+    height: 2px;
+    display: inline-block;
+    background-color: #bdae82;
+    vertical-align: middle;
+    margin: 0 20px 0 20px;
+  }
+}
 //////////////////////Hero
 .hero {
   &__row {
@@ -125,6 +244,31 @@ li {
       color: black;
     }
   }
+
+  @media (max-width: 920px) {
+    &__description {
+      font-size: 18px;
+    }
+    h1 {
+      font-size: 49px;
+    }
+  }
+  @media (max-width: 768px) {
+    &__title {
+      h1 {
+        font-size: 40px;
+      }
+      margin-bottom: 20px;
+    }
+    &__text {
+      max-width: 65%;
+    }
+    p {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 60px;
+    }
+  }
 }
 
 ///////////////////////////////Skills
@@ -163,27 +307,19 @@ li {
     line-height: 36px;
     margin-bottom: 102px;
   }
-}
-.title-line {
-  text-align: center;
-  margin-bottom: 60px;
-  color: #bdae82;
-  font-family: Merriweather;
-  font-size: 27px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 80px;
-  letter-spacing: 0em;
-
-  h2::before,
-  h2::after {
-    content: "";
-    width: 274px;
-    height: 2px;
-    display: inline-block;
-    background-color: #bdae82;
-    vertical-align: middle;
-    margin: 0 20px 0 20px;
+  @media (max-width: 900px) {
+    &__title-line {
+      h2::before,
+      h2::after {
+        content: "";
+        width: 235px;
+        height: 2px;
+        display: inline-block;
+        background-color: #bdae82;
+        vertical-align: middle;
+        margin: 0 20px 0 20px;
+      }
+    }
   }
 }
 
@@ -193,7 +329,9 @@ li {
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 75px;
+    margin-bottom: 62.5px;
+  }
+  &__title-line {
   }
 
   &__item-container {
@@ -216,15 +354,38 @@ li {
     flex-wrap: wrap;
   }
 
-  &__image {
-    max-width: 445px;
-    max-height: 560px;
-    margin: 0 25px 25px 0;
+  &__row {
+    max-width: 100%;
+    display: flex;
+    //margin: 0 0px 0 0px;
+  }
+
+  &__column {
+    padding: 0 12.5px 12.5px 12.5px;
+    max-width: 33.3%;
     img {
       width: 100%;
     }
     &:nth-child(3n) {
-      margin-right: 0px;
+      padding-right: 0;
+    }
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__title-line {
+      h2::before,
+      h2::after {
+        content: "";
+        width: 200px;
+        height: 2px;
+        display: inline-block;
+        background-color: #bdae82;
+        vertical-align: middle;
+        margin: 0 20px 0 20px;
+      }
     }
   }
 }
@@ -245,6 +406,20 @@ li {
     max-width: 100%;
     img {
       width: 100%;
+    }
+  }
+  @media (max-width: 900px) {
+    &__title-line {
+      h2::before,
+      h2::after {
+        content: "";
+        width: 235px;
+        height: 2px;
+        display: inline-block;
+        background-color: #bdae82;
+        vertical-align: middle;
+        margin: 0 20px 0 20px;
+      }
     }
   }
 }
@@ -316,7 +491,7 @@ li {
     letter-spacing: 0em;
     margin-bottom: 40px;
   }
-  @media (max-width: 878px) {
+  @media (max-width: 900px) {
     &__description {
       font-size: 16px;
     }
@@ -325,6 +500,16 @@ li {
     }
     &__button {
       width: 220px;
+    }
+    h2::before,
+    h2::after {
+      content: "";
+      width: 235px;
+      height: 2px;
+      display: inline-block;
+      background-color: #bdae82;
+      vertical-align: middle;
+      margin: 0 20px 0 20px;
     }
   }
 }
@@ -335,6 +520,7 @@ li {
     background: url("/Assets/img/contacts.jpg");
     height: 700px;
     max-height: 700px;
+    background-size: cover;
   }
 
   &__container {
@@ -363,6 +549,12 @@ li {
     }
     button[type="submit"] {
       background-color: #bdae82;
+    }
+    @media (max-width: 920px) {
+      input[type="text"],
+      textarea {
+        width: 300px;
+      }
     }
   }
 
@@ -400,6 +592,8 @@ li {
   &__github {
     span {
       margin-right: 20px;
+      font-size: 20px;
+      line-height: 50px;
       &:last-child {
         //margin-right: 0;
       }
@@ -416,6 +610,17 @@ li {
       &:last-child {
         margin-right: 0px;
       }
+    }
+  }
+  @media (max-width: 920px) {
+    span {
+      font-size: 16px;
+    }
+    a {
+      font-size: 16px;
+    }
+    img {
+      width: 24px;
     }
   }
 }

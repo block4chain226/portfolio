@@ -33,6 +33,7 @@
                 <span class="header__slash">/</span>
                 <span><a href="">ru </a></span>
               </div>
+              <div class="header__burger"><span></span></div>
             </div>
           </div>
         </div>
@@ -139,23 +140,28 @@
                 </div>
               </div>
               <div class="portfolio__gallery-container">
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img.jpg" alt="" />
+                <div class="portfolio__row">
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img.jpg" alt="" />
+                  </div>
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img1.jpg" alt="" />
+                  </div>
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img2.jpg" alt="" />
+                  </div>
                 </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img1.jpg" alt="" />
-                </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img2.jpg" alt="" />
-                </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img3.jpg" alt="" />
-                </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img4.jpg" alt="" />
-                </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img5.jpg" alt="" />
+
+                <div class="portfolio__row">
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img3.jpg" alt="" />
+                  </div>
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img4.jpg" alt="" />
+                  </div>
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img5.jpg" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -232,23 +238,21 @@
         </div>
         <!--Contacts-->
         <div class="contacts">
-          <div class="container">
-            <div class="contacts__hero">
-              <div class="contacts__container">
-                <div class="contacts__title"><h2>Contact me</h2></div>
-                <form action="#">
-                  <p><input type="text" value="E-mail" /></p>
-                  <p><input type="text" value="Phone" /></p>
-                  <p>
-                    <textarea name="textarea" id="textarea" cols="30" rows="3">
+          <div class="contacts__hero">
+            <div class="contacts__container">
+              <div class="contacts__title"><h2>Contact me</h2></div>
+              <form action="#">
+                <p><input type="text" value="E-mail" /></p>
+                <p><input type="text" value="Phone" /></p>
+                <p>
+                  <textarea name="textarea" id="textarea" cols="30" rows="3">
 Message</textarea
-                    >
-                  </p>
-                  <p>
-                    <button class="button" type="submit">Send message</button>
-                  </p>
-                </form>
-              </div>
+                  >
+                </p>
+                <p>
+                  <button class="button" type="submit">Send message</button>
+                </p>
+              </form>
             </div>
           </div>
         </div>
@@ -273,5 +277,6 @@ Message</textarea
         </div>
       </footer>
     </div>
+    <script src="/Js/script.js"></script>
   </body>
 </html>
