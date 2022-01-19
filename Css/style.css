@@ -214,6 +214,10 @@ li {
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
+  .header .active__burger::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
 }
 
 @media (max-width: 420px) {
@@ -230,6 +234,14 @@ li {
   .header__burger {
     top: 15px;
     right: 40px;
+  }
+}
+
+@media (max-width: 620px) {
+  .header .active {
+    left: 0%;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 }
 

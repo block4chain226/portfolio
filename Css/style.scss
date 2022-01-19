@@ -130,6 +130,11 @@ li {
       top: 20px;
       right: 64px;
       background-color: red;
+      // @media (max-width: 767px) {
+      //   & {
+      //     transform: rotate(45deg);
+      //   }
+      // }
     }
   }
   @media (min-width: 768px) {
@@ -190,9 +195,13 @@ li {
         margin-bottom: 16px;
       }
     }
+
     .active {
       left: 25%;
       transition: all 0.4s ease-in-out;
+      &__burger::before {
+        transform: rotate(45deg);
+      }
     }
   }
   @media (max-width: 420px) {
@@ -209,6 +218,12 @@ li {
     &__burger {
       top: 15px;
       right: 40px;
+    }
+  }
+  @media (max-width: 620px) {
+    .active {
+      left: 0%;
+      transition: all 0.4s ease-in-out;
     }
   }
 }
