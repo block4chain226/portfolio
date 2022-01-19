@@ -162,6 +162,10 @@ li {
 }
 
 @media (max-width: 768px) {
+  .header__row {
+    background-position: -1px -41px;
+    background-size: 978px;
+  }
   .header__language {
     margin-right: 120px;
   }
@@ -260,7 +264,7 @@ li {
 @media (max-width: 768px) {
   .title-line {
     text-align: center;
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 40px;
     text-align: center;
@@ -286,6 +290,14 @@ li {
   background-repeat: no-repeat;
   padding: 160px 0px 330px 80px;
   margin-bottom: 97px;
+}
+
+@media (max-width: 768px) {
+  .hero__row {
+    padding: 25px 0px 245px 60px;
+    height: 230px;
+    background-image: url("/Assets/img/bglittle.jpg");
+  }
 }
 
 @media (max-width: 470px) {
@@ -341,10 +353,11 @@ li {
 
 @media (max-width: 768px) {
   .hero__title {
-    margin-bottom: 20px;
+    margin-bottom: -36px;
   }
   .hero__title h1 {
-    font-size: 40px;
+    font-size: 31px;
+    line-height: 174px;
   }
   .hero__text {
     max-width: 65%;
@@ -437,8 +450,8 @@ li {
     margin-bottom: 36px;
   }
   .skills__title-line {
-    line-height: 40px;
-    font-size: 27px;
+    line-height: 48px;
+    font-size: 20px;
   }
   .skills__item-container {
     text-align: center;
@@ -478,7 +491,7 @@ li {
     line-height: 22px;
   }
   .skills__title {
-    line-height: 40px;
+    line-height: 22px;
   }
 }
 
@@ -614,7 +627,7 @@ li {
     max-width: 100%;
     margin: 0;
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
   }
   .portfolio__item-container {
     width: 100%;
@@ -622,6 +635,7 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 49px;
   }
   .portfolio__gallery-container {
     max-width: 100%;
@@ -635,8 +649,8 @@ li {
     margin-right: 0px;
   }
   .portfolio__title-line {
-    line-height: 80px;
-    font-size: 27px;
+    line-height: 94px;
+    font-size: 20px;
     margin-bottom: 50px;
   }
   .portfolio__title-line h2::before,
@@ -684,13 +698,14 @@ li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .video__title-line {
-    line-height: 80px;
-    font-size: 27px;
+    line-height: 62px;
+    font-size: 21px;
     margin-bottom: 50px;
   }
   .video__title-line h2::before,
@@ -817,9 +832,9 @@ li {
     margin-bottom: 0;
   }
   .price__title-line {
-    line-height: 80px;
-    font-size: 27px;
-    margin-bottom: 50px;
+    line-height: 118px;
+    font-size: 21px;
+    margin-bottom: 35px;
   }
   .price__title-line h2::before,
   .price__title-line h2::after {
@@ -836,7 +851,7 @@ li {
             align-items: center;
   }
   .price__item {
-    width: 100%;
+    width: 156%;
     margin-bottom: 50px;
   }
   .price__item:last-child {
@@ -925,6 +940,9 @@ li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 600px;
+    background-size: cover;
+    background-position: bottom;
   }
   .contacts button[type="submit"] {
     max-width: 220px;
@@ -932,12 +950,13 @@ li {
     font-size: 20px;
   }
   .contacts input[type="text"] {
-    width: 94.5%;
-    max-width: 450px;
+    max-width: 550px;
+    height: 35px;
   }
   .contacts textarea {
     max-width: 450px;
     width: 94.5%;
+    margin-bottom: 10px;
   }
   .contacts form {
     padding: 0px 20px;
@@ -956,6 +975,9 @@ li {
   }
   .contacts__title {
     text-align: center;
+    line-height: 74px;
+    font-size: 19px;
+    margin-bottom: 42px;
   }
 }
 
@@ -968,6 +990,10 @@ li {
     padding: 16px 43px;
     font-size: 16px;
   }
+}
+
+.footer a:hover {
+  color: #bdae82;
 }
 
 .footer__container {
@@ -995,6 +1021,10 @@ li {
   margin-right: 0px;
 }
 
+.footer__socials a:hover {
+  color: #bdae82;
+}
+
 @media (max-width: 920px) {
   .footer span {
     font-size: 16px;
@@ -1019,7 +1049,28 @@ li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 28px 0 28px 0;
+    padding: 16px 0 28px 0;
+  }
+  .footer__github {
+    margin-bottom: -10px;
+  }
+  .footer__github span {
+    font-size: 20px;
+    line-height: 45px;
+  }
+  .footer__rolling {
+    margin-bottom: 15px;
+  }
+  .footer__rolling a {
+    font-size: 20px;
+  }
+  .footer__socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer__socials img {
+    width: 31px;
   }
 }
 /*# sourceMappingURL=style.css.map */

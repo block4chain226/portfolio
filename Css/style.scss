@@ -148,6 +148,10 @@ li {
     &__menu {
       //display: none;
     }
+    &__row {
+      background-position: -1px -41px;
+      background-size: 978px;
+    }
     &__language {
       margin-right: 120px;
       a {
@@ -240,7 +244,7 @@ li {
   @media (max-width: 768px) {
     & {
       text-align: center;
-      font-size: 32px;
+      font-size: 20px;
       font-weight: 700;
       line-height: 40px;
       text-align: center;
@@ -270,6 +274,11 @@ li {
     //min-height: 333px;
     padding: 160px 0px 330px 80px;
     margin-bottom: 97px;
+    @media (max-width: 768px) {
+      padding: 25px 0px 245px 60px;
+      height: 230px;
+      background-image: url("/Assets/img/bglittle.jpg");
+    }
     @media (max-width: 470px) {
       padding: 160px 0 330px 20px;
     }
@@ -320,9 +329,10 @@ li {
   @media (max-width: 768px) {
     &__title {
       h1 {
-        font-size: 40px;
+        font-size: 31px;
+        line-height: 174px;
       }
-      margin-bottom: 20px;
+      margin-bottom: -36px;
     }
     &__text {
       max-width: 65%;
@@ -332,9 +342,6 @@ li {
       line-height: 24px;
       margin-bottom: 60px;
     }
-    // &__button {
-    //   margin-bottom: 152px;
-    // }
   }
 }
 
@@ -405,8 +412,8 @@ li {
       margin-bottom: 36px;
     }
     &__title-line {
-      line-height: 40px;
-      font-size: 27px;
+      line-height: 48px;
+      font-size: 20px;
     }
     &__item-container {
       text-align: center;
@@ -437,7 +444,7 @@ li {
     }
     &__title {
       //text-align: center;
-      line-height: 40px;
+      line-height: 22px;
     }
   }
   @media (max-width: 500px) {
@@ -547,12 +554,13 @@ li {
       max-width: 100%;
       margin: 0;
       padding: 0;
-      margin-bottom: 15px;
+      margin-bottom: 7px;
     }
 
     &__item-container {
       width: 100%;
       flex-direction: column;
+      margin-bottom: 49px;
     }
     &__gallery-container {
       max-width: 100%;
@@ -566,8 +574,9 @@ li {
       }
     }
     &__title-line {
-      line-height: 80px;
-      font-size: 27px;
+      line-height: 94px;
+      font-size: 20px;
+
       margin-bottom: 50px;
       h2::before,
       h2::after {
@@ -613,11 +622,12 @@ li {
   @media (max-width: 768px) {
     &__container {
       display: flex;
+      padding: 0;
       align-items: center;
     }
     &__title-line {
-      line-height: 80px;
-      font-size: 27px;
+      line-height: 62px;
+      font-size: 21px;
       margin-bottom: 50px;
       h2::before,
       h2::after {
@@ -730,9 +740,9 @@ li {
       margin-bottom: 0;
     }
     &__title-line {
-      line-height: 80px;
-      font-size: 27px;
-      margin-bottom: 50px;
+      line-height: 118px;
+      font-size: 21px;
+      margin-bottom: 35px;
       h2::before,
       h2::after {
         content: "";
@@ -744,7 +754,7 @@ li {
       align-items: center;
     }
     &__item {
-      width: 100%;
+      width: 156%;
       margin-bottom: 50px;
       &:last-child {
         margin-bottom: 80px;
@@ -820,6 +830,9 @@ li {
     &__hero {
       display: flex;
       justify-content: center;
+      height: 600px;
+      background-size: cover;
+      background-position: bottom;
     }
     button[type="submit"] {
       max-width: 220px;
@@ -827,12 +840,14 @@ li {
       font-size: 20px;
     }
     input[type="text"] {
-      width: 94.5%;
-      max-width: 450px;
+      //width: 94.5%;
+      max-width: 550px;
+      height: 35px;
     }
     textarea {
       max-width: 450px;
       width: 94.5%;
+      margin-bottom: 10px;
     }
     form {
       padding: 0px 20px;
@@ -844,6 +859,9 @@ li {
     }
     &__title {
       text-align: center;
+      line-height: 74px;
+      font-size: 19px;
+      margin-bottom: 42px;
     }
   }
   @media (max-width: 550px) {
@@ -859,6 +877,9 @@ li {
 }
 
 .footer {
+  a:hover {
+    color: $goldFont;
+  }
   &__container {
     padding: 50px 20px;
     display: flex;
@@ -870,9 +891,6 @@ li {
       margin-right: 20px;
       font-size: 20px;
       line-height: 50px;
-      &:last-child {
-        //margin-right: 0;
-      }
     }
   }
 
@@ -886,6 +904,9 @@ li {
       &:last-child {
         margin-right: 0px;
       }
+    }
+    a:hover {
+      color: $goldFont;
     }
   }
   @media (max-width: 920px) {
@@ -904,7 +925,26 @@ li {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 28px 0 28px 0;
+      padding: 16px 0 28px 0;
+    }
+    &__github {
+      span {
+        font-size: 20px;
+        line-height: 45px;
+      }
+      margin-bottom: -10px;
+    }
+    &__rolling {
+      margin-bottom: 15px;
+      a {
+        font-size: 20px;
+      }
+    }
+    &__socials {
+      display: flex;
+      img {
+        width: 31px;
+      }
     }
   }
 }
