@@ -6,6 +6,10 @@
   border: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .pad {
   padding: 0;
 }
@@ -16,6 +20,10 @@
       align-self: center;
   text-align: center;
   vertical-align: inherit;
+}
+
+.button a:hover {
+  color: white;
 }
 
 body {
@@ -85,12 +93,20 @@ li {
   margin-right: 25px;
 }
 
+.header__menu li a:hover {
+  color: #bdae82;
+}
+
 .header__menu li:last-child {
   margin-right: 0;
 }
 
 .header__language {
   margin-left: 41px;
+}
+
+.header__language a:hover {
+  color: #bdae82;
 }
 
 .header__burger {
@@ -516,6 +532,11 @@ li {
   border: 2px solid #bdae82;
 }
 
+.portfolio__button:hover {
+  background-color: #bdae82;
+  color: white;
+}
+
 .portfolio__button a {
   color: #bdae82;
   font-size: calc(18px + 10 * ((100vw - 320px) / (1440 - 320)));
@@ -875,6 +896,13 @@ li {
 
 .contacts__container button[type="submit"] {
   background-color: #bdae82;
+  max-width: 220px;
+  padding: 16px 43px;
+  font-size: 20px;
+}
+
+.contacts__container button[type="submit"]:hover {
+  color: white;
 }
 
 .contacts__title {
@@ -934,6 +962,11 @@ li {
 @media (max-width: 550px) {
   .contacts form {
     max-width: 200px;
+  }
+  .contacts button[type="submit"] {
+    max-width: 220px;
+    padding: 16px 43px;
+    font-size: 16px;
   }
 }
 

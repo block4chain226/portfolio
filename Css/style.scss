@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 $whiteFont: white;
+$goldFont: #bdae82;
 * {
   padding: 0;
   margin: 0;
   border: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 .pad {
   padding: 0;
@@ -15,6 +19,9 @@ $whiteFont: white;
   //height: 55px;
   text-align: center;
   vertical-align: inherit;
+  a:hover {
+    color: $whiteFont;
+  }
 }
 body {
   font-family: Inter;
@@ -74,6 +81,9 @@ li {
     li {
       display: inline;
       margin-right: 25px;
+      a:hover {
+        color: $goldFont;
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -82,6 +92,9 @@ li {
 
   &__language {
     margin-left: 41px;
+    a:hover {
+      color: $goldFont;
+    }
   }
   &__burger {
     //padding-top: 30px;
@@ -460,6 +473,10 @@ li {
     display: flex;
   }
   &__button {
+    &:hover {
+      background-color: $goldFont;
+      color: $whiteFont;
+    }
     margin-right: 5px;
     background-color: black;
     width: 50%;
@@ -467,6 +484,7 @@ li {
       color: #bdae82;
       font-size: calc(18px + 10 * ((100vw - 320px) / (1440 - 320)));
     }
+
     border: 2px solid #bdae82;
   }
 
@@ -778,13 +796,13 @@ li {
     }
     button[type="submit"] {
       background-color: #bdae82;
+      max-width: 220px;
+      padding: 16px 43px;
+      font-size: 20px;
+      &:hover {
+        color: white;
+      }
     }
-    // @media (max-width: 920px) {
-    //   input[type="text"],
-    //   textarea {
-    //     width: 300px;
-    //   }
-    // }
   }
 
   &__title {
@@ -831,6 +849,11 @@ li {
   @media (max-width: 550px) {
     form {
       max-width: 200px;
+    }
+    button[type="submit"] {
+      max-width: 220px;
+      padding: 16px 43px;
+      font-size: 16px;
     }
   }
 }
