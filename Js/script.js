@@ -20,5 +20,3 @@ document.querySelector("form").addEventListener("submit", function (e) {
   const input1 = document.getElementById("input1").value;
   console.log(input1);
 });
-document.body.style.backgroundColor = "red";
-setTimeout(() => (document.body.style.backgroundColor = ""), 5000);
