@@ -20,12 +20,16 @@
             </div>
             <div class="header__menu-container">
               <div class="header__menu">
-                <ul>
-                  <li><a href="">Skills</a></li>
-                  <li><a href="">Portfolio</a></li>
-                  <li><a href="">Video</a></li>
-                  <li><a href="">Price</a></li>
-                  <li><a href="">Contacts</a></li>
+                <ul class="menu-list">
+                  <li><a class="nav" href="#skills">Skills</a></li>
+                  <li class="nav">
+                    <a class="nav" href="#portfolio">Portfolio</a>
+                  </li>
+                  <li class="nav"><a class="nav" href="#video">Video</a></li>
+                  <li class="nav"><a class="nav" href="#price">Price</a></li>
+                  <li class="nav">
+                    <a class="nav" href="#contacts">Contacts</a>
+                  </li>
                 </ul>
               </div>
               <div class="header__language">
@@ -33,6 +37,7 @@
                 <span class="header__slash">/</span>
                 <span><a href="">ru </a></span>
               </div>
+              <div class="header__burger"><span></span></div>
             </div>
           </div>
         </div>
@@ -61,108 +66,121 @@
           </div>
         </div>
         <!--Skills-->
-        <div class="skills">
+        <section id="skills" class="skills">
           <div class="container">
             <div class="skills__container">
               <div class="skills__title-line title-line">
                 <h2>Skills</h2>
               </div>
               <div class="skills__item-container">
-                <div class="skills__item">
-                  <div class="skills__img img-container">
-                    <img src="/Assets/svg/camera1.svg" alt="" />
+                <span class="skills__row">
+                  <div class="skills__item">
+                    <div class="skills__img img-container">
+                      <img src="/Assets/svg/camera1.svg" alt="" />
+                    </div>
+                    <div class="skills__title">
+                      <span>Digital Photography</span>
+                    </div>
+                    <div class="skills__description">
+                      High-quality photos in the studio and on the nature
+                    </div>
                   </div>
-                  <div class="skills__title">
-                    <span>Digital Photography</span>
+                  <div class="skills__item">
+                    <div class="skills__img img-container">
+                      <img src="/Assets/svg/video1.svg" alt="" />
+                    </div>
+                    <div class="skills__title">
+                      <span>Video shooting</span>
+                    </div>
+                    <div class="skills__description">
+                      Capture your moments so that they always stay with you
+                    </div>
                   </div>
-                  <div class="skills__description">
-                    High-quality photos in the studio and on the nature
+                </span>
+                <span class="skills__row">
+                  <div class="skills__item">
+                    <div class="skills__img img-container">
+                      <img src="/Assets/svg/image1.svg" alt="" />
+                    </div>
+                    <div class="skills__title">
+                      <span>Retouch</span>
+                    </div>
+                    <div class="skills__description">
+                      I strive to make photography surpass reality
+                    </div>
                   </div>
-                </div>
-                <div class="skills__item">
-                  <div class="skills__img img-container">
-                    <img src="/Assets/svg/video1.svg" alt="" />
+                  <div class="skills__item">
+                    <div class="skills__img img-container">
+                      <img src="/Assets/svg/mic1.svg" alt="" />
+                    </div>
+                    <div class="skills__title">
+                      <span>Audio</span>
+                    </div>
+                    <div class="skills__description">
+                      Professional Sounds recording for video, advertising,
+                      portfolio
+                    </div>
                   </div>
-                  <div class="skills__title">
-                    <span>Video shooting</span>
-                  </div>
-                  <div class="skills__description">
-                    Capture your moments so that they always stay with you
-                  </div>
-                </div>
-                <div class="skills__item">
-                  <div class="skills__img img-container">
-                    <img src="/Assets/svg/image1.svg" alt="" />
-                  </div>
-                  <div class="skills__title">
-                    <span>Retouch</span>
-                  </div>
-                  <div class="skills__description">
-                    I strive to make photography surpass reality
-                  </div>
-                </div>
-                <div class="skills__item">
-                  <div class="skills__img img-container">
-                    <img src="/Assets/svg/mic1.svg" alt="" />
-                  </div>
-                  <div class="skills__title">
-                    <span>Audio</span>
-                  </div>
-                  <div class="skills__description">
-                    Professional Sounds recording for video, advertising,
-                    portfolio
-                  </div>
-                </div>
+                </span>
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!--Portfolio-->
-        <div class="portfolio">
+        <section id="portfolio" class="portfolio">
           <div class="container">
             <div class="portfolio__container">
               <div class="portfolio__title-line title-line">
                 <h2>Portfolio</h2>
               </div>
               <div class="portfolio__item-container">
-                <div class="portfolio__button button">
-                  <a href="">Winter</a>
-                </div>
-                <div class="portfolio__button button">
-                  <a href="">Spring</a>
-                </div>
-                <div class="portfolio__button button">
-                  <a href="">Summer</a>
-                </div>
-                <div class="portfolio__button button">
-                  <a href="">Autumn</a>
-                </div>
+                <span class="portfolio__item-buttons">
+                  <div class="portfolio__button button">
+                    <a href=""><span>Winter</span></a>
+                  </div>
+                  <div class="portfolio__button button">
+                    <a href="">Spring</a>
+                  </div>
+                </span>
+                <span class="portfolio__item-buttons">
+                  <div class="portfolio__button button">
+                    <a href="">Summer</a>
+                  </div>
+                  <div class="portfolio__button button">
+                    <a href="">Autumn</a>
+                  </div>
+                </span>
               </div>
               <div class="portfolio__gallery-container">
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img.jpg" alt="" />
+                <div class="portfolio__row">
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img.jpg" alt="" />
+                  </div>
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img1.jpg" alt="" />
+                  </div>
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img2.jpg" alt="" />
+                  </div>
                 </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img1.jpg" alt="" />
-                </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img2.jpg" alt="" />
-                </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img3.jpg" alt="" />
-                </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img4.jpg" alt="" />
-                </div>
-                <div class="portfolio__image">
-                  <img src="/Assets/img/gallery/portfolio-img5.jpg" alt="" />
+
+                <div class="portfolio__row">
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img3.jpg" alt="" />
+                  </div>
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img4.jpg" alt="" />
+                  </div>
+                  <div class="portfolio__column">
+                    <img src="/Assets/img/gallery/portfolio-img5.jpg" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!--Video-->
-        <div class="video">
+        <section id="video" class="video">
           <div class="container">
             <div class="video__container">
               <div class="video__title-line title-line">
@@ -175,9 +193,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!--Price-->
-        <div class="price">
+        <section id="price" class="price">
           <div class="container">
             <div class="price__container">
               <div class="price__title-line title-line">
@@ -229,39 +247,42 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <!--Contacts-->
-        <div class="contacts">
-          <div class="container">
-            <div class="contacts__hero">
-              <div class="contacts__container">
-                <div class="contacts__title"><h2>Contact me</h2></div>
-                <form action="#">
-                  <p><input type="text" value="E-mail" /></p>
-                  <p><input type="text" value="Phone" /></p>
-                  <p>
-                    <textarea name="textarea" id="textarea" cols="30" rows="3">
+        <section id="contacts" class="contacts">
+          <div class="contacts__hero">
+            <div class="contacts__container">
+              <div class="contacts__title"><h2>Contact me</h2></div>
+              <form action="#">
+                <p><input type="text" value="E-mail" /></p>
+                <p><input type="text" value="Phone" /></p>
+                <p>
+                  <textarea name="textarea" id="textarea" cols="30" rows="2">
 Message</textarea
-                    >
-                  </p>
-                  <p>
-                    <button class="button" type="submit">Send message</button>
-                  </p>
-                </form>
-              </div>
+                  >
+                </p>
+                <div>
+                  <button class="contacts__button button" type="submit">
+                    Send message
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-        </div>
+        </section>
       </main>
       <!--Footer-->
       <footer class="footer">
         <div class="container">
           <div class="footer__container">
             <div class="footer__github">
-              <span>©</span> <span>2022</span><a href=""><span>github</span></a>
+              <span>©</span> <span>2022</span
+              ><a href="https://github.com/retouch226"><span>github</span></a>
             </div>
             <div class="footer__rolling">
-              <a href=""> Rolling Scopes School</a>
+              <a href="https://github.com/rolling-scopes-school">
+                Rolling Scopes School</a
+              >
             </div>
             <div class="footer__socials">
               <a href=""><img src="/Assets/svg/inst1.svg" alt="" /></a>
@@ -273,5 +294,6 @@ Message</textarea
         </div>
       </footer>
     </div>
+    <script src="/Js/script.js"></script>
   </body>
 </html>
