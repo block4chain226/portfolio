@@ -100,6 +100,7 @@ li {
     //padding-top: 30px;
     position: relative;
     right: 0px;
+    z-index: 3;
     top: 5px;
     &::after,
     &::before {
@@ -113,7 +114,7 @@ li {
       position: absolute;
       top: 10px;
       right: 64px;
-      background-color: yellow;
+      background-color: white;
     }
     span::after {
       content: "";
@@ -129,7 +130,7 @@ li {
       position: absolute;
       top: 20px;
       right: 64px;
-      background-color: red;
+      background-color: white;
       // @media (max-width: 767px) {
       //   & {
       //     transform: rotate(45deg);
@@ -172,7 +173,7 @@ li {
     //menu burger
     &__menu {
       top: 0;
-
+      z-index: 2;
       left: 100%;
       position: fixed;
       width: 100%;
@@ -197,11 +198,11 @@ li {
     }
 
     .active {
+      .header__burger::before {
+        // transform: rotate(45deg);
+      }
       left: 25%;
       transition: all 0.4s ease-in-out;
-      &__burger::before {
-        transform: rotate(45deg);
-      }
     }
   }
   @media (max-width: 420px) {
@@ -927,12 +928,16 @@ li {
     a {
       vertical-align: sub;
       margin-right: 20px;
+      img:hover {
+        fill: red;
+      }
       &:last-child {
         margin-right: 0px;
       }
-    }
-    a:hover {
-      color: $goldFont;
+      &:hover {
+        stroke: red;
+        fill: red;
+      }
     }
   }
   @media (max-width: 920px) {

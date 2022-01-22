@@ -15,3 +15,10 @@ function closeMenu(event) {
     event.target.parentNode.parentNode.parentElement.classList.remove("active");
   }
 }
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const input1 = document.getElementById("input1").value;
+  console.log(input1);
+});
+document.body.style.backgroundColor = "red";
+setTimeout(() => (document.body.style.backgroundColor = ""), 5000);
