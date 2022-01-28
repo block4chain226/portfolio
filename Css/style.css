@@ -15,6 +15,7 @@ html {
 }
 
 .button {
+  cursor: pointer;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -216,6 +217,13 @@ li {
     left: 25%;
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+  }
+  .header .active[order-st="rotate"] .header__burger::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .header .rotate span {
+    width: 100px;
   }
 }
 
@@ -591,9 +599,23 @@ li {
   color: white;
 }
 
+.portfolio__button:hover button {
+  color: white;
+}
+
 .portfolio__button a {
   color: #bdae82;
   font-size: calc(18px + 10 * ((100vw - 320px) / (1440 - 320)));
+}
+
+.portfolio__button button {
+  color: #bdae82;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.portfolio__button button:hover {
+  color: white;
 }
 
 .portfolio__gallery-container {

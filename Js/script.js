@@ -4,7 +4,8 @@ headerBurger.addEventListener("click", () => {
   const headerMenu = document.querySelector(".header__menu");
   //headerMenu.classList.toggle("menu-mobile");
   headerMenu.classList.toggle("active");
-  headerBurger.classList.toggle("active");
+  headerBurger.classList.toggle("rotate");
+  const beforeR = headerBurger.querySelectorAll("::before");
 });
 const menuList = document.querySelector(".menu-list");
 const navLinks = document.querySelectorAll(".nav");
@@ -15,8 +16,24 @@ function closeMenu(event) {
     event.target.parentNode.parentNode.parentElement.classList.remove("active");
   }
 }
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const input1 = document.getElementById("input1").value;
-  console.log(input1);
+
+//portfolio
+
+let but = document.querySelector(".portfolio__item-container");
+let portfolioButton = document.querySelector(".portfolio__button");
+
+let portImages = document.querySelectorAll(".portfolio-image");
+but = addEventListener("click", (event) => {
+  event.preventDefault();
+  if (
+    (event.target && event.target.tagName == "DIV") ||
+    (event.target && event.target.tagName == "BUTTON")
+  ) {
+    console.log(event.target.dataset);
+    portImages.forEach((img, index) => {
+      img.src = `/Assets/img/gallery/${event.target.dataset.season}/${
+        index + 1
+      }.jpeg`;
+    });
+  }
 });
