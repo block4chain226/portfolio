@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/Css/style.css" />
     <title>Portfolio</title>
   </head>
-  <body>
+  <body class="light">
     <div class="wrapper">
       <!--Header-->
       <header class="header">
@@ -19,23 +19,38 @@
               </div>
             </div>
             <div class="header__menu-container">
-              <div class="header__menu">
+              <div class="header__menu" order-st="rotate">
                 <ul class="menu-list">
-                  <li><a class="nav" href="#skills">Skills</a></li>
-                  <li class="nav">
-                    <a class="nav" href="#portfolio">Portfolio</a>
+                  <li>
+                    <a class="nav" href="#skills" data-i18Obj="skills"
+                      >Skills</a
+                    >
                   </li>
-                  <li class="nav"><a class="nav" href="#video">Video</a></li>
-                  <li class="nav"><a class="nav" href="#price">Price</a></li>
                   <li class="nav">
-                    <a class="nav" href="#contacts">Contacts</a>
+                    <a class="nav" href="#portfolio" data-i18Obj="portfolio"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li class="nav">
+                    <a class="nav" href="#video" data-i18Obj="video">Video</a>
+                  </li>
+                  <li class="nav">
+                    <a class="nav" href="#price" data-i18Obj="price">Price</a>
+                  </li>
+                  <li class="nav">
+                    <a class="nav" href="#contacts" data-i18Obj="contacts"
+                      >Contacts</a
+                    >
                   </li>
                 </ul>
               </div>
               <div class="header__language">
-                <span><a href="">en</a></span>
+                <span><a href="" data-lang="en">en</a></span>
                 <span class="header__slash">/</span>
-                <span><a href="">ru </a></span>
+                <span><a href="" data-lang="ru">ru </a></span>
+              </div>
+              <div class="header__day-switch">
+                <a href=""><img src="/Assets/svg/carbon_sun.svg" alt="" /></a>
               </div>
               <div class="header__burger"><span></span></div>
             </div>
@@ -50,16 +65,16 @@
             <div class="hero__row">
               <div class="hero__text">
                 <div class="hero__title">
-                  <h1>Alexa Rise</h1>
+                  <h1 data-i18Obj="hero-title">Alexa Rise</h1>
                 </div>
                 <div class="hero__description">
-                  <p>
+                  <p data-i18Obj="hero-text">
                     Save sincere emotions, romantic feelings and happy moments
                     of life together with professional photographer Alexa Rise
                   </p>
                 </div>
                 <div class="hero__button button">
-                  <a href=""><span>Hire me</span></a>
+                  <a href=""><span data-i18Obj="hire">Hire me</span></a>
                 </div>
               </div>
             </div>
@@ -70,7 +85,7 @@
           <div class="container">
             <div class="skills__container">
               <div class="skills__title-line title-line">
-                <h2>Skills</h2>
+                <h2 data-i18Obj="skills">Skills</h2>
               </div>
               <div class="skills__item-container">
                 <span class="skills__row">
@@ -79,9 +94,11 @@
                       <img src="/Assets/svg/camera1.svg" alt="" />
                     </div>
                     <div class="skills__title">
-                      <span>Digital Photography</span>
+                      <span data-i18Obj="skill-title-1"
+                        >Digital Photography</span
+                      >
                     </div>
-                    <div class="skills__description">
+                    <div class="skills__description" data-i18Obj="skill-text-1">
                       High-quality photos in the studio and on the nature
                     </div>
                   </div>
@@ -90,9 +107,9 @@
                       <img src="/Assets/svg/video1.svg" alt="" />
                     </div>
                     <div class="skills__title">
-                      <span>Video shooting</span>
+                      <span data-i18Obj="skill-title-2">Video shooting</span>
                     </div>
-                    <div class="skills__description">
+                    <div class="skills__description" data-i18Obj="skill-text-2">
                       Capture your moments so that they always stay with you
                     </div>
                   </div>
@@ -103,9 +120,9 @@
                       <img src="/Assets/svg/image1.svg" alt="" />
                     </div>
                     <div class="skills__title">
-                      <span>Retouch</span>
+                      <span data-i18Obj="skill-title-3">Retouch</span>
                     </div>
-                    <div class="skills__description">
+                    <div class="skills__description" data-i18Obj="skill-text-3">
                       I strive to make photography surpass reality
                     </div>
                   </div>
@@ -114,9 +131,9 @@
                       <img src="/Assets/svg/mic1.svg" alt="" />
                     </div>
                     <div class="skills__title">
-                      <span>Audio</span>
+                      <span data-i18Obj="skill-title-4">Audio</span>
                     </div>
-                    <div class="skills__description">
+                    <div class="skills__description" data-i18Obj="skill-text-4">
                       Professional Sounds recording for video, advertising,
                       portfolio
                     </div>
@@ -127,52 +144,101 @@
           </div>
         </section>
         <!--Portfolio-->
+
         <section id="portfolio" class="portfolio">
           <div class="container">
             <div class="portfolio__container">
               <div class="portfolio__title-line title-line">
-                <h2>Portfolio</h2>
+                <h2 data-i18Obj="portfolio">Portfolio</h2>
               </div>
               <div class="portfolio__item-container">
                 <span class="portfolio__item-buttons">
-                  <div class="portfolio__button button">
-                    <a href=""><span>Winter</span></a>
+                  <div class="portfolio__button button" data-season="winter">
+                    <button
+                      class="button1"
+                      data-season="winter"
+                      data-i18Obj="winter"
+                    >
+                      Winter
+                    </button>
                   </div>
-                  <div class="portfolio__button button">
-                    <a href="">Spring</a>
+                  <div class="portfolio__button button" data-season="spring">
+                    <button
+                      class="button1"
+                      data-season="spring"
+                      data-i18Obj="spring"
+                    >
+                      Spring
+                    </button>
                   </div>
                 </span>
                 <span class="portfolio__item-buttons">
-                  <div class="portfolio__button button">
-                    <a href="">Summer</a>
+                  <div class="portfolio__button button" data-season="summer">
+                    <button
+                      class="button1"
+                      data-season="summer"
+                      data-i18Obj="summer"
+                    >
+                      Summer
+                    </button>
                   </div>
-                  <div class="portfolio__button button">
-                    <a href="">Autumn</a>
+                  <div class="portfolio__button button" data-season="autumn">
+                    <button
+                      class="button1"
+                      data-season="autumn"
+                      data-i18Obj="autumn"
+                    >
+                      Autumn
+                    </button>
                   </div>
                 </span>
               </div>
               <div class="portfolio__gallery-container">
                 <div class="portfolio__row">
                   <div class="portfolio__column">
-                    <img src="/Assets/img/gallery/portfolio-img.jpg" alt="" />
+                    <img
+                      src="/Assets/img/gallery/autumn/1.jpeg"
+                      class="portfolio-image"
+                      alt=""
+                    />
                   </div>
                   <div class="portfolio__column">
-                    <img src="/Assets/img/gallery/portfolio-img1.jpg" alt="" />
+                    <img
+                      src="/Assets/img/gallery/autumn/2.jpeg"
+                      class="portfolio-image"
+                      alt=""
+                    />
                   </div>
                   <div class="portfolio__column">
-                    <img src="/Assets/img/gallery/portfolio-img2.jpg" alt="" />
+                    <img
+                      src="/Assets/img/gallery/autumn/3.jpeg"
+                      class="portfolio-image"
+                      alt=""
+                    />
                   </div>
                 </div>
 
                 <div class="portfolio__row">
                   <div class="portfolio__column">
-                    <img src="/Assets/img/gallery/portfolio-img3.jpg" alt="" />
+                    <img
+                      src="/Assets/img/gallery/autumn/4.jpeg"
+                      class="portfolio-image"
+                      alt=""
+                    />
                   </div>
                   <div class="portfolio__column">
-                    <img src="/Assets/img/gallery/portfolio-img4.jpg" alt="" />
+                    <img
+                      src="/Assets/img/gallery/autumn/5.jpeg"
+                      class="portfolio-image"
+                      alt=""
+                    />
                   </div>
                   <div class="portfolio__column">
-                    <img src="/Assets/img/gallery/portfolio-img5.jpg" alt="" />
+                    <img
+                      src="/Assets/img/gallery/autumn/6.jpeg"
+                      class="portfolio-image"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
@@ -184,7 +250,7 @@
           <div class="container">
             <div class="video__container">
               <div class="video__title-line title-line">
-                <h2>Video</h2>
+                <h2 data-i18Obj="video">Video</h2>
               </div>
               <div class="video__video-container">
                 <div class="img-container">
@@ -199,7 +265,7 @@
           <div class="container">
             <div class="price__container">
               <div class="price__title-line title-line">
-                <h2>Price</h2>
+                <h2 data-i18Obj="price">Price</h2>
               </div>
               <div class="price__item-container">
                 <div class="price__item">
@@ -213,7 +279,7 @@
                     Make up, visage
                   </div>
                   <div class="price__button button">
-                    <a href="">Order shooting</a>
+                    <a href="" data-i18Obj="order">Order shooting</a>
                   </div>
                 </div>
                 <div class="price__item">
@@ -227,7 +293,7 @@
                     Make up, visage
                   </div>
                   <div class="price__button button">
-                    <a href="">Order shooting</a>
+                    <a href="" data-i18Obj="order">Order shooting</a>
                   </div>
                 </div>
                 <div class="price__item">
@@ -241,7 +307,7 @@
                     Make up, visage, hairstyle
                   </div>
                   <div class="price__button button">
-                    <a href="">Order shooting</a>
+                    <a href="" data-i18Obj="order">Order shooting</a>
                   </div>
                 </div>
               </div>
@@ -252,7 +318,9 @@
         <section id="contacts" class="contacts">
           <div class="contacts__hero">
             <div class="contacts__container">
-              <div class="contacts__title"><h2>Contact me</h2></div>
+              <div class="contacts__title">
+                <h2 data-i18Obj="contact-me">Contact me</h2>
+              </div>
               <form action="#">
                 <p><input id="input1" type="text" value="E-mail" /></p>
                 <p><input id="input2" type="text" value="Phone" /></p>
@@ -262,7 +330,11 @@ Message</textarea
                   >
                 </p>
                 <div>
-                  <button class="contacts__button button" type="submit">
+                  <button
+                    class="contacts__button button"
+                    data-i18Obj="send-message"
+                    type="submit"
+                  >
                     Send message
                   </button>
                 </div>

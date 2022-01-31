@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  --bg-color: #000;
+  --primary-text-color: #fff;
+  --title-color: #bdae82;
+}
+
+.light {
+  --bg-color: #fff;
+  --primary-text-color: #000;
+  --title-color: #000;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +27,7 @@ html {
 }
 
 .button {
+  cursor: pointer;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -23,7 +36,7 @@ html {
 }
 
 .button a:hover {
-  color: white;
+  color: var(--primary-text-color);
 }
 
 body {
@@ -33,13 +46,13 @@ body {
   font-weight: 400;
   line-height: 50px;
   letter-spacing: 0em;
-  color: white;
-  background-color: black;
+  color: var(--primary-text-color);
+  background-color: var(--bg-color);
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-text-color);
 }
 
 li {
@@ -47,7 +60,7 @@ li {
 }
 
 .wrapper {
-  background-color: black;
+  background-color: var(--bg-color);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -81,6 +94,10 @@ li {
   width: 50px;
 }
 
+.header__day-switch {
+  margin-left: 28px;
+}
+
 .header__menu-container {
   padding-top: 20px;
   display: -webkit-box;
@@ -94,7 +111,11 @@ li {
   margin-right: 25px;
 }
 
-.header__menu li a:hover {
+.header__menu li a {
+  color: #fff;
+}
+
+.header__menu li color a:hover {
   color: #bdae82;
 }
 
@@ -104,9 +125,14 @@ li {
 
 .header__language {
   margin-left: 41px;
+  color: #fff;
 }
 
-.header__language a:hover {
+.header__language a {
+  color: #fff;
+}
+
+.header__language a.active, .header__language a:hover {
   color: #bdae82;
 }
 
@@ -217,6 +243,13 @@ li {
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
   }
+  .header .active[order-st="rotate"] .header__burger::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .header .rotate span {
+    width: 100px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -251,7 +284,7 @@ li {
 .title-line {
   text-align: center;
   margin-bottom: 60px;
-  color: #bdae82;
+  color: var(--title-color);
   font-family: Merriweather;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,7 +307,7 @@ li {
   content: "";
   display: inline-block;
   width: 280px;
-  background-color: #bdae82;
+  background-color: var(--title-color);
   height: 2px;
   margin: 0 20px;
   vertical-align: middle;
@@ -285,7 +318,7 @@ li {
   display: inline-block;
   width: 280px;
   height: 2px;
-  background-color: #bdae82;
+  background-color: var(--title-color);
   margin: 0 20px;
   vertical-align: middle;
 }
@@ -347,6 +380,7 @@ li {
 
 .hero__text {
   max-width: 37%;
+  color: #fff;
 }
 
 .hero__title {
@@ -581,19 +615,33 @@ li {
 
 .portfolio__button {
   margin-right: 5px;
-  background-color: black;
+  background-color: var(--bg-color);
   width: 50%;
   border: 2px solid #bdae82;
 }
 
 .portfolio__button:hover {
   background-color: #bdae82;
-  color: white;
+  color: var(--primary-text-color);
+}
+
+.portfolio__button:hover button {
+  color: var(--primary-text-color);
 }
 
 .portfolio__button a {
   color: #bdae82;
   font-size: calc(18px + 10 * ((100vw - 320px) / (1440 - 320)));
+}
+
+.portfolio__button button {
+  color: var(--title-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.portfolio__button button:hover {
+  color: var(--primary-text-color);
 }
 
 .portfolio__gallery-container {
@@ -734,6 +782,15 @@ li {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+.checked {
+  background-color: #bdae82;
+  color: var(--primary-text-color);
+}
+
+.checked button {
+  color: var(--primary-text-color);
 }
 
 .price__button {
@@ -1018,6 +1075,10 @@ li {
   }
 }
 
+.footer {
+  color: #fff;
+}
+
 .footer a:hover {
   color: #bdae82;
 }
@@ -1030,9 +1091,11 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: black;
 }
 
 .footer__github span {
+  color: #fff;
   margin-right: 20px;
   font-size: 20px;
   line-height: 50px;
