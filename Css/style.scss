@@ -686,9 +686,6 @@ li {
 
   &__video-container {
     max-width: 100%;
-    img {
-      width: 100%;
-    }
   }
   @media (max-width: 900px) {
     &__title-line {
@@ -709,6 +706,84 @@ li {
       display: flex;
       padding: 0;
       align-items: center;
+    }
+  }
+}
+////video player
+.player {
+  max-width: 100%;
+  position: relative;
+  &__display {
+    width: 200px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__video {
+    width: 100%;
+  }
+
+  &__controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__little-icn {
+    max-width: 30px;
+    display: flex;
+    align-self: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__volume-icn {
+    width: 100%;
+    margin-left: -13px;
+  }
+
+  &__play {
+    width: 40px;
+    margin-right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  input[name="playbackRate"] {
+    width: 75%;
+  }
+  input[name="volume"] {
+    width: 25%;
+  }
+  &__slider {
+  }
+}
+.progress {
+  width: 68%;
+  &__filled {
+    width: 97%;
+
+    flex: 0;
+    flex-basis: 50%;
+    input {
+      width: 100%;
     }
   }
 }
