@@ -252,9 +252,61 @@
               <div class="video__title-line title-line">
                 <h2 data-i18Obj="video">Video</h2>
               </div>
-              <div class="video__video-container">
-                <div class="img-container">
-                  <img src="/Assets/img/gallery/video.jpg" alt="" />
+              <div class="video__player player">
+                <div class="player">
+                  <video
+                    src="/Assets/video/video.mp4"
+                    class="player__video viewer"
+                    autoplay
+                  ></video>
+                  <div class="player__controls">
+                    <span
+                      ><img
+                        class="player__display"
+                        src="/Assets/svg/video/bigplay.png"
+                        alt=""
+                    /></span>
+                    <span>
+                      <img
+                        class="player__play"
+                        src="/Assets/svg/video/playwhite.webp"
+                        alt=""
+                    /></span>
+                    <div class="progress">
+                      <div class="progress__filled">
+                        <input
+                          class="prog"
+                          data-abc="progr"
+                          type="range"
+                          name=""
+                          min="0"
+                          max="235"
+                          value="0"
+                          id=""
+                        />
+                      </div>
+                    </div>
+
+                    <!-- <input
+                      type="range"
+                      name="playbackRate"
+                      class="player__slider"
+                      id=""
+                      min="0.5"
+                      max="2"
+                      step="0.1"
+                      value="1"
+                    /> -->
+                    <input
+                      type="range"
+                      min="0"
+                      max="1"
+                      step="0.05"
+                      class="player__slider"
+                      value="1"
+                      name="volume"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

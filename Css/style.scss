@@ -686,9 +686,6 @@ li {
 
   &__video-container {
     max-width: 100%;
-    img {
-      width: 100%;
-    }
   }
   @media (max-width: 900px) {
     &__title-line {
@@ -712,6 +709,76 @@ li {
     }
   }
 }
+////video player
+.player {
+  width: 100%;
+  position: relative;
+  &__display {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    left: 45%;
+    position: absolute;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__video {
+    width: 100%;
+  }
+
+  &__controls {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__play {
+    width: 40px;
+    margin-right: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  input[name="playbackRate"] {
+    width: 75%;
+  }
+  input[name="volume"] {
+    width: 25%;
+  }
+  &__slider {
+  }
+}
+.progress {
+  width: 95%;
+  &__filled {
+    width: 100%;
+
+    flex: 0;
+    flex-basis: 50%;
+    input {
+      width: inherit;
+      input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  background-image: linear-gradient(#ff4500, #ff4500);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+    }
+   
+}
+
 .checked {
   background-color: $goldFont;
   color: var(--primary-text-color);

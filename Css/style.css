@@ -755,10 +755,6 @@ li {
   max-width: 100%;
 }
 
-.video__video-container img {
-  width: 100%;
-}
-
 @media (max-width: 900px) {
   .video__title-line h2::before,
   .video__title-line h2::after {
@@ -782,6 +778,81 @@ li {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+.player {
+  width: 100%;
+  position: relative;
+}
+
+.player__display {
+  width: 200px;
+  height: 200px;
+  top: 40%;
+  left: 45%;
+  position: absolute;
+}
+
+.player__display img {
+  width: 100%;
+}
+
+.player__video {
+  width: 100%;
+}
+
+.player__controls {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.player__play {
+  width: 40px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.player__play img {
+  width: 100%;
+}
+
+.player input[name="playbackRate"] {
+  width: 75%;
+}
+
+.player input[name="volume"] {
+  width: 25%;
+}
+
+.progress {
+  width: 95%;
+}
+
+.progress__filled {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.progress__filled input {
+  width: inherit;
+  color: red;
 }
 
 .checked {

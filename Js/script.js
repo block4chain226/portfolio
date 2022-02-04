@@ -166,7 +166,76 @@ headerDaySwitch.addEventListener("click", (event) => {
 const priceItemContainer = document.querySelector(".price__item-container");
 priceItemContainer.addEventListener("click", (event) => {
   event.preventDefault();
-  // if (event.target.classList.contains("a")) {
+});
 
-  // }
+//Video
+const player = document.querySelector(".player");
+const video = document.querySelector(".viewer");
+const playerControl = document.querySelector(".player__controls");
+const progress = document.querySelector(".progress");
+const playerPlay = document.querySelector(".player__play");
+const playerDisplay = document.querySelector(".player__display");
+const progressBar = document.querySelector(".progress__filled");
+//progressBar.children[0].value = 0;
+const ranges = document.querySelectorAll(".player__slider");
+//const volumeRange = document.querySelector(".player__slide");
+
+//functions
+function toggle() {
+  // const state = video.paused ? "play" : "pause";
+  // video[state]();
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+function updateButton() {
+  const icon = this.paused
+    ? (playerPlay.src = "/Assets/svg/video/playwhite.webp")
+    : (playerPlay.src = "/Assets/svg/video/pause.png");
+  const icon1 = this.paused
+    ? (playerDisplay.style.display = "inline-block") &&
+      (playerDisplay.src = "/Assets/svg/video/bigplay.png")
+    : (playerDisplay.style.display = "none");
+  playerPlay.textContent = icon;
+  playerDisplay.textContent = icon1;
+  console.log("update");
+}
+function rangeUpdate() {
+  console.log(this.value);
+  video[this.name] = this.value;
+}
+
+function progressUpdate(e) {
+  console.log(e.offsetX);
+
+  console.log(e.target);
+  if (e.target.classList.contains("prog")) {
+    const child = progress.offsetWidth;
+    const progressTime = Math.ceil((e.offsetX / child) * video.duration);
+    video.currentTime = progressTime;
+  }
+}
+
+//Event listeners
+progressBar.children[0].style.backgroundColor = "red";
+video.addEventListener("click", toggle);
+video.addEventListener("play", updateButton);
+video.addEventListener("pause", updateButton);
+playerPlay.addEventListener("click", toggle);
+playerDisplay.addEventListener("click", toggle);
+video.addEventListener("timeupdate", progressUpdate);
+ranges.forEach((item) => {
+  item.addEventListener("click", rangeUpdate);
+});
+ranges.forEach((item) => {
+  item.addEventListener("mousemove", rangeUpdate);
+});
+progressBar.addEventListener("click", progressUpdate);
+let io = 0;
+video.addEventListener("timeupdate", (event) => {
+  console.log("The currentTime attribute has been updated. Again." + io++);
+  progressBar.children[0].value++;
+  console.log(progressBar.children[0].value);
 });
