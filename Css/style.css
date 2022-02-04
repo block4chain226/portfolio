@@ -788,7 +788,7 @@ li {
 .player__display {
   width: 200px;
   height: 200px;
-  top: 40%;
+  top: 30%;
   left: 45%;
   position: absolute;
 }
@@ -811,6 +811,24 @@ li {
           align-items: center;
 }
 
+.player__little-icn {
+  max-width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.player__little-icn img {
+  width: 100%;
+}
+
+.player__volume-icn {
+  width: 100%;
+  margin-left: -13px;
+}
+
 .player__play {
   width: 40px;
   margin-right: 20px;
@@ -823,6 +841,8 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .player__play img {
@@ -838,11 +858,11 @@ li {
 }
 
 .progress {
-  width: 95%;
+  width: 68%;
 }
 
 .progress__filled {
-  width: 100%;
+  width: 97%;
   -webkit-box-flex: 0;
       -ms-flex: 0;
           flex: 0;
@@ -851,8 +871,7 @@ li {
 }
 
 .progress__filled input {
-  width: inherit;
-  color: red;
+  width: 100%;
 }
 
 .checked {

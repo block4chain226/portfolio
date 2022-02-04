@@ -176,6 +176,7 @@ const progress = document.querySelector(".progress");
 const playerPlay = document.querySelector(".player__play");
 const playerDisplay = document.querySelector(".player__display");
 const progressBar = document.querySelector(".progress__filled");
+const mute = document.querySelector(".player__volume-icn");
 //progressBar.children[0].value = 0;
 const ranges = document.querySelectorAll(".player__slider");
 //const volumeRange = document.querySelector(".player__slide");
@@ -192,11 +193,11 @@ function toggle() {
 }
 function updateButton() {
   const icon = this.paused
-    ? (playerPlay.src = "/Assets/svg/video/playwhite.webp")
-    : (playerPlay.src = "/Assets/svg/video/pause.png");
+    ? (playerPlay.src = "/Assets/svg/video/NewPlay.ico")
+    : (playerPlay.src = "/Assets/svg/video/NewPause.ico");
   const icon1 = this.paused
     ? (playerDisplay.style.display = "inline-block") &&
-      (playerDisplay.src = "/Assets/svg/video/bigplay.png")
+      (playerDisplay.src = "/Assets/svg/video/NewPlay.ico")
     : (playerDisplay.style.display = "none");
   playerPlay.textContent = icon;
   playerDisplay.textContent = icon1;
@@ -215,6 +216,14 @@ function progressUpdate(e) {
     const child = progress.offsetWidth;
     const progressTime = Math.ceil((e.offsetX / child) * video.duration);
     video.currentTime = progressTime;
+  }
+}
+function muteVolume() {
+  if (video.muted) {
+    video.muted = false;
+  } else {
+    video.volume = 0.0;
+    video.muted = true;
   }
 }
 
@@ -239,3 +248,4 @@ video.addEventListener("timeupdate", (event) => {
   progressBar.children[0].value++;
   console.log(progressBar.children[0].value);
 });
+mute.addEventListener("click", muteVolume);
