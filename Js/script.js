@@ -180,6 +180,7 @@ const mute = document.querySelector(".player__volume-icn");
 //progressBar.children[0].value = 0;
 const ranges = document.querySelectorAll(".player__slider");
 //const volumeRange = document.querySelector(".player__slide");
+let volumeLevel = video.volume;
 
 //functions
 function toggle() {
@@ -221,6 +222,7 @@ function progressUpdate(e) {
 function muteVolume() {
   if (video.muted) {
     video.muted = false;
+    video.volume = 0.7;
   } else {
     video.volume = 0.0;
     video.muted = true;
